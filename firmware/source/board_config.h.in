@@ -135,7 +135,7 @@
 //---------------------------------------------------------
 // Feather ThinkInk
 //---------------------------------------------------------
-#if BOARD == FEATHER_EPD
+#elif BOARD == FEATHER_EPD
   // I2C0
   #define I2C0_ENABLED 1
   #define U2IF_I2C0_SDA 4
@@ -146,14 +146,14 @@
   #define U2IF_I2C1_SCL 3
   // SPI0
   #define SPI0_ENABLED 1
-  #define U2IF_SPI0_CK 14
-  #define U2IF_SPI0_MOSI 15
-  #define U2IF_SPI0_MISO 8
+  #define U2IF_SPI0_CK 22
+  #define U2IF_SPI0_MOSI 23
+  #define U2IF_SPI0_MISO 99
   // SPI1
   #define SPI1_ENABLED 1
-  #define U2IF_SPI1_CK 22
-  #define U2IF_SPI1_MOSI 23
-  #define U2IF_SPI1_MISO None
+  #define U2IF_SPI1_CK 14
+  #define U2IF_SPI1_MOSI 15
+  #define U2IF_SPI1_MISO 8
   // UART0
   #define UART0_ENABLED 1
   #define U2IF_UART0_TX 0
