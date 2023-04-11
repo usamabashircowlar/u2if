@@ -33,6 +33,8 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="239a", ATTR{idProduct}=="00f7", MODE="0666"
 KERNEL=="hidraw*", ATTRS{idVendor}=="cafe", ATTRS{idProduct}=="4005", TAG+="uaccess", GROUP="plugdev", MODE="0660"
 # Adafruit Feather
 KERNEL=="hidraw*", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="00f1", TAG+="uaccess", GROUP="plugdev", MODE="0660"
+# Adafruit Feather ThinkInk
+KERNEL=="hidraw*", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="812C", TAG+="uaccess", GROUP="plugdev", MODE="0660"
 # Adafruit ItsyBitsy
 KERNEL=="hidraw*", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="00fd", TAG+="uaccess", GROUP="plugdev", MODE="0660"
 # Adafruit QT2040 Trinkey
@@ -64,6 +66,7 @@ The firmware to upload to Pico is u2if/firmware/source/build/u2if.uf2
 Compatible board can be:
  - PICO
  - FEATHER
+ - FEATHER_EPD
  - ITSYBITSY 
  - QTPY
  - QT2040_TRINKEY

@@ -122,6 +122,20 @@ Implemented interfaces:
 
 </details>
 
+### Adafruit Feather ThinkInk RP2040
+<details>
+
+Implemented interfaces:
+ - GPIO
+ - ADC
+ - PWM
+ - UART0
+ - I2C0 & I2C1
+ - SPI0 & SPI1
+ - WS2812B
+
+</details>
+
 ### Adafruit Qt Py RP2040
 <details>
 

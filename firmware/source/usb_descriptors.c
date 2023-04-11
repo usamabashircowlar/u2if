@@ -44,6 +44,11 @@
   #define USB_PRD "Feather RP2040 U2IF"
   #define USB_VID 0x239A
   #define USB_PID 0x00F1
+#elif BOARD == FEATHER_EPD
+  #define USB_MFG "Adafruit"
+  #define USB_PRD "Feather RP2040 ThinkInk U2IF"
+  #define USB_VID 0x239A
+  #define USB_PID 0x812C
 #elif BOARD == ITSYBITSY
   #define USB_MFG "Adafruit"
   #define USB_PRD "ItsyBitsy RP2040 U2IF"
