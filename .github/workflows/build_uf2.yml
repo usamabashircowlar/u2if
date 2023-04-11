@@ -40,4 +40,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: u2if_*.uf2
+          files: firmware/source/build/u2if_*.uf2
