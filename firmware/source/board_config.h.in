@@ -13,7 +13,9 @@
 #define ITSYBITSY       3
 #define QTPY            4
 #define QT2040_TRINKEY  5
-#define FEATHER_EPD		6
+#define FEATHER_EPD     6
+#define FEATHER_RFM     7
+#define FEATHER_CAN     8
 
 #define BOARD ${BOARD}
 
@@ -149,6 +151,50 @@
   #define U2IF_SPI0_CK 22
   #define U2IF_SPI0_MOSI 23
   #define U2IF_SPI0_MISO 99
+  // SPI1
+  #define SPI1_ENABLED 1
+  #define U2IF_SPI1_CK 14
+  #define U2IF_SPI1_MOSI 15
+  #define U2IF_SPI1_MISO 8
+  // UART0
+  #define UART0_ENABLED 1
+  #define U2IF_UART0_TX 0
+  #define U2IF_UART0_RX 1
+
+//---------------------------------------------------------
+// Feather RFM
+//---------------------------------------------------------
+#elif BOARD == FEATHER_RFM
+  // I2C0
+  #define I2C0_ENABLED 1
+  #define U2IF_I2C0_SDA 4
+  #define U2IF_I2C0_SCL 5
+  // I2C1
+  #define I2C1_ENABLED 1
+  #define U2IF_I2C1_SDA 2
+  #define U2IF_I2C1_SCL 3
+  // SPI1
+  #define SPI1_ENABLED 1
+  #define U2IF_SPI1_CK 14
+  #define U2IF_SPI1_MOSI 15
+  #define U2IF_SPI1_MISO 8
+  // UART0
+  #define UART0_ENABLED 1
+  #define U2IF_UART0_TX 0
+  #define U2IF_UART0_RX 1
+
+//---------------------------------------------------------
+// Feather CAN
+//---------------------------------------------------------
+#elif BOARD == FEATHER_CAN
+  // I2C0
+  #define I2C0_ENABLED 1
+  #define U2IF_I2C0_SDA 4
+  #define U2IF_I2C0_SCL 5
+  // I2C1
+  #define I2C1_ENABLED 1
+  #define U2IF_I2C1_SDA 2
+  #define U2IF_I2C1_SCL 3
   // SPI1
   #define SPI1_ENABLED 1
   #define U2IF_SPI1_CK 14

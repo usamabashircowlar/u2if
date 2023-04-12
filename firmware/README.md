@@ -33,6 +33,10 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="239a", ATTR{idProduct}=="00f7", MODE="0666"
 KERNEL=="hidraw*", ATTRS{idVendor}=="cafe", ATTRS{idProduct}=="4005", TAG+="uaccess", GROUP="plugdev", MODE="0660"
 # Adafruit Feather
 KERNEL=="hidraw*", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="00f1", TAG+="uaccess", GROUP="plugdev", MODE="0660"
+# Adafruit Feather CAN Bus
+KERNEL=="hidraw*", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="8130", TAG+="uaccess", GROUP="plugdev", MODE="0660"
+# Adafruit Feather RFM
+KERNEL=="hidraw*", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="812E", TAG+="uaccess", GROUP="plugdev", MODE="0660"
 # Adafruit Feather ThinkInk
 KERNEL=="hidraw*", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="812C", TAG+="uaccess", GROUP="plugdev", MODE="0660"
 # Adafruit ItsyBitsy
@@ -66,7 +70,9 @@ The firmware to upload to Pico is u2if/firmware/source/build/u2if.uf2
 Compatible board can be:
  - PICO
  - FEATHER
+ - FEATHER_CAN
  - FEATHER_EPD
+ - FEATHER_RFM
  - ITSYBITSY 
  - QTPY
  - QT2040_TRINKEY
