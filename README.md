@@ -122,6 +122,34 @@ Implemented interfaces:
 
 </details>
 
+### Adafruit Feather CAN Bus RP2040
+<details>
+
+Implemented interfaces:
+ - GPIO
+ - ADC
+ - PWM
+ - UART0
+ - I2C0 & I2C1
+ - SPI1
+ - WS2812B
+
+</details>
+
+### Adafruit Feather RFM RP2040
+<details>
+
+Implemented interfaces:
+ - GPIO
+ - ADC
+ - PWM
+ - UART0
+ - I2C0 & I2C1
+ - SPI1
+ - WS2812B
+
+</details>
+
 ### Adafruit Feather ThinkInk RP2040
 <details>
 
