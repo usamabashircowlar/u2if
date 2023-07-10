@@ -41,6 +41,8 @@ KERNEL=="hidraw*", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="812E", TAG+="uacc
 KERNEL=="hidraw*", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="812C", TAG+="uaccess", GROUP="plugdev", MODE="0660"
 # Adafruit ItsyBitsy
 KERNEL=="hidraw*", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="00fd", TAG+="uaccess", GROUP="plugdev", MODE="0660"
+# Adafruit KB2040
+KERNEL=="hidraw*", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="0105", TAG+="uaccess", GROUP="plugdev", MODE="0660"
 # Adafruit QT2040 Trinkey
 KERNEL=="hidraw*", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="0109", TAG+="uaccess", GROUP="plugdev", MODE="0660"
 # Adafruit QTPY
@@ -73,7 +75,8 @@ Compatible board can be:
  - FEATHER_CAN
  - FEATHER_EPD
  - FEATHER_RFM
- - ITSYBITSY 
+ - ITSYBITSY
+ - KB2040
  - QTPY
  - QT2040_TRINKEY
 
