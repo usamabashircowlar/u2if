@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License (MIT)
  *
  * Copyright (c) 2019 Ha Thach (tinyusb.org)
@@ -74,6 +74,11 @@
   #define USB_PRD "QT2040 Trinkey U2IF"
   #define USB_VID 0x239A
   #define USB_PID 0x0109
+#elif BOARD == KB2040
+  #define USB_MFG "Adafruit"
+  #define USB_PRD "KB2040 Kee Boar U2IF"
+  #define USB_VID 0x239A
+  #define USB_PID 0x0105
 #elif BOARD == PICO
   #define USB_MFG "Pico"
   #define USB_PRD "U2IF"
@@ -99,7 +104,7 @@ tusb_desc_device_t const desc_device =
                 .bDeviceClass       = TUSB_CLASS_MISC,
                 .bDeviceSubClass    = MISC_SUBCLASS_COMMON,
                 .bDeviceProtocol    = MISC_PROTOCOL_IAD,
-                
+
                 .bMaxPacketSize0    = CFG_TUD_ENDPOINT0_SIZE,
 
                 .idVendor           = USB_VID,

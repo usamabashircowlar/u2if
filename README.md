@@ -192,6 +192,20 @@ Implemented interfaces:
 
 </details>
 
+### Adafruit KB2040
+<details>
+
+Implemented interfaces:
+ - GPIO
+ - ADC
+ - PWM
+ - UART0
+ - I2C0
+ - SPI0
+ - WS2812B
+
+</details>
+
 ### Adafruit Trinkey QT2040
 <details>
 

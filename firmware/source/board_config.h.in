@@ -16,6 +16,8 @@
 #define FEATHER_EPD     6
 #define FEATHER_RFM     7
 #define FEATHER_CAN     8
+#define KB2040          9
+
 
 #define BOARD ${BOARD}
 
@@ -29,7 +31,7 @@
 #define HUB75_MAX_LEDS      ${HUB75_MAX_LEDS}
 
 //---------------------------------------------------------
-// Feather 
+// Feather
 //---------------------------------------------------------
 #if BOARD == FEATHER
   // I2C0
@@ -206,6 +208,24 @@
   #define U2IF_UART0_RX 1
 
 //---------------------------------------------------------
+// KB2040
+//---------------------------------------------------------
+#elif BOARD == KB2040
+  // I2C0
+  #define I2C0_ENABLED 1
+  #define U2IF_I2C0_SDA 12
+  #define U2IF_I2C0_SCL 13
+  // SPI0
+  #define SPI0_ENABLED 1
+  #define U2IF_SPI0_CK 18
+  #define U2IF_SPI0_MOSI 19
+  #define U2IF_SPI0_MISO 20
+  // UART0
+  #define UART0_ENABLED 1
+  #define U2IF_UART0_TX 0
+  #define U2IF_UART0_RX 1
+
+//---------------------------------------------------------
 // Pico (default)
 //---------------------------------------------------------
 #elif BOARD == PICO
@@ -242,7 +262,7 @@
   #define U2IF_I2S_SD  12
   // HUB75
   #define HUB75_ENABLED  HUB75_ALLOW
-  
+
 #else
   #warning "Please define board type"
 #endif

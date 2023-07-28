@@ -14,7 +14,7 @@ pico_sdk_init()
 
 
 set(BOARD "PICO" CACHE STRING "BaseName chosen by the user at CMake configure time")
-set_property(CACHE BOARD PROPERTY STRINGS PICO FEATHER FEATHER_CAN FEATHER_EPD FEATHER_RFM ITSYBITSY QTPY QT2040_TRINKEY)
+set_property(CACHE BOARD PROPERTY STRINGS PICO FEATHER FEATHER_CAN FEATHER_EPD FEATHER_RFM ITSYBITSY QTPY QT2040_TRINKEY KB2040)
 message(STATUS "Selected board:'${BOARD}'")
 
 # might help for feather?
@@ -68,7 +68,7 @@ pico_generate_pio_header(u2if ${CMAKE_CURRENT_LIST_DIR}/interfaces/hub75.pio OUT
 
 target_include_directories(u2if PRIVATE ${CMAKE_CURRENT_LIST_DIR})
 
-target_link_libraries(u2if PRIVATE pico_stdlib pico_unique_id tinyusb_device tinyusb_board 
+target_link_libraries(u2if PRIVATE pico_stdlib pico_unique_id tinyusb_device tinyusb_board
 hardware_i2c hardware_watchdog hardware_pwm hardware_adc hardware_spi
 hardware_pio hardware_dma pico_sync pico_multicore)
 

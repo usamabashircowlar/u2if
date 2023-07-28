@@ -12,6 +12,7 @@ COMPATIBLE_BOARD_PID_VID = [
     (0x239a, 0x812C),  # Adafruit Feather ThinkInk
     (0x239a, 0x812E),  # Adafruit Feather RFM
     (0x239a, 0x00fd),  # Adafruit ItsyBitsy
+    (0x239a, 0x0105),  # Adafruit KB2040
     (0x239a, 0x0109),  # Adafruit QT2040 Trinket
     (0x239a, 0x00f7),  # Adafruit QTPY
 ]
