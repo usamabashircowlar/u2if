@@ -20,7 +20,7 @@ jobs:
         run: sed -i 's/xosc_hw->startup = startup_delay;/xosc_hw->startup = startup_delay * 64;/' firmware/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
 # also need this include
       - name: Patch pico-sdk for cstdint include
-        run: sed -i '13i #include <cstdint>' firmware/pico-sdk/tools/pioasm/pio_disassembler.h
+        run: sed -i '13i \#include <cstdint>' firmware/pico-sdk/tools/pioasm/pio_disassembler.h
 #-- HACK-----------------------------------------------------------
       - name: Build firmwares
         run: |
