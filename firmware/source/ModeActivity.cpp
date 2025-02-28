@@ -3,7 +3,7 @@
 #include "hardware/gpio.h"
 
 // Activity led
-const uint8_t LED_PIN = 25;
+const uint8_t LED_PIN = 28;
 DeviceState ModeActivity::_sDeviceState = DeviceState::NOT_MOUNTED;
 repeating_timer_t ModeActivity::_sLedTimer;
 uint32_t ModeActivity::_sBlinkPeriodCount;

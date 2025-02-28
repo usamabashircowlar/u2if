@@ -121,7 +121,7 @@ CmdStatus Gpio::task(uint8_t response[64]) {
 
 
 CmdStatus Gpio::initPin(uint8_t const *cmd) {
-    const uint gp = cmd[1];
+    const uint gp = (cmd[1] == 28) ? 25 : cmd[1];
     const uint dir = cmd[2] == 0 ? GPIO_IN : GPIO_OUT;
     gpio_init(gp);
     gpio_set_dir(gp, dir);
@@ -136,21 +136,21 @@ CmdStatus Gpio::initPin(uint8_t const *cmd) {
 }
 
 CmdStatus Gpio::setPin(uint8_t const *cmd) {
-    const uint gp = cmd[1];
+    const uint gp = (cmd[1] == 28) ? 25 : cmd[1];
     bool value = cmd[2] == 0 ? false : true;
     gpio_put(gp, value);
     return CmdStatus::OK;
 }
 
 CmdStatus Gpio::getPin(uint8_t const *cmd, uint8_t response[64]) {
-    const uint8_t gp = cmd[1];
+    const uint8_t gp = (cmd[1] == 28) ? 25 : cmd[1];
     response[2] = gp;
     response[3] = gpio_get(gp);
     return CmdStatus::OK;
 }
 
 CmdStatus Gpio::setIrq(uint8_t const *cmd) {
-    const uint gpio = cmd[1];
+    const uint gpio = (cmd[1] == 28) ? 25 : cmd[1];
     const uint8_t ev = cmd[2];
     bool debounced = cmd[3] == 0x01 ? true : false;
     uint8_t event_flags = 0;
